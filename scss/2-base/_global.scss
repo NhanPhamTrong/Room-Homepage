@@ -1,0 +1,41 @@
+body {
+    font-family: 'Spartan', sans-serif;
+    font-size: 12px;
+
+    .container {
+        width: 328px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        .container {
+            width: 552px;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        .container {
+            width: 704px;
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    body {
+        .container {
+            width: 928px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    body {
+        .container {
+            width: 1120px;
+        }
+    }
+}

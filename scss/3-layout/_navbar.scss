@@ -1,0 +1,162 @@
+nav {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+
+    #navbar {
+        width: 100%;
+
+        .container {
+            padding: 45px 0;
+            display: flex;
+            position: relative;
+
+            .menu-toggler {
+                height: 15px;
+                width: 20px;
+                background: transparent url("../images/icon-hamburger.svg") no-repeat center;
+                background-size: contain;
+                border: none;
+                position: absolute;
+                left: 0;
+                top: 45px;
+                z-index: 10;
+            }
+
+            .menu-toggler.active {
+                background: transparent url("../images/icon-close.svg") no-repeat center;
+                background-size: contain;
+            }
+
+            .brand {
+                height: 15px;
+                width: 65px;
+                margin: 0 auto;
+                background: url("../images/logo.svg") no-repeat center;
+                background-size: contain;
+            }
+        }
+
+        #menu {
+            min-height: 100vh;
+            width: 100%;
+            background-color: $menu-dark-background;
+            position: fixed;
+            left: 0;
+            top: 0;
+
+            .menu-inner {
+                width: 100%;
+                padding: 45px 0;
+                background-color: $menu-background;
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translate(-50%, 0);
+
+                ul {
+                    width: 328px;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: flex-start;
+    
+                    li {
+                        margin-left: 30px;
+                        
+                        a {
+                            color: $word-color-3;
+                            text-transform: lowercase;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    nav {
+        #navbar {
+            #menu {
+                .menu-inner {
+                    ul {
+                        width: 552px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    nav {
+        #navbar {
+            #menu {
+                .menu-inner {
+                    ul {
+                        width: 704px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    nav {
+        #navbar {
+            padding-left: 65px;
+            display: flex;
+
+            .container {
+                width: 70px;
+                margin: 0;
+
+                .menu-toggler {
+                    display: none;
+                }
+            }
+
+            #menu {
+                min-height: 0;
+                width: auto;
+                background-color: transparent;
+                position: relative;
+
+                .menu-inner {
+                    background-color: transparent;
+
+                    ul {
+                        width: auto;
+
+                        li {
+                            a {
+                                color: $word-color-1;
+                            }
+
+                            a:hover {
+                                position: relative;
+
+                                span {
+                                    height: 2px;
+                                    width: 50%;
+                                    background-color: $menu-item-hover-underline;
+                                    position: absolute;
+                                    bottom: -10px;
+                                    left: 50%;
+                                    transform: translate(-50%, 0);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    
+}
