@@ -43,6 +43,7 @@ nav {
             min-height: 100vh;
             width: 100%;
             background-color: $menu-dark-background;
+            display: none;
             position: fixed;
             left: 0;
             top: 0;
@@ -72,6 +73,10 @@ nav {
                     }
                 }
             }
+        }
+
+        #menu.active {
+            display: block;
         }
     }
 }
@@ -123,6 +128,7 @@ nav {
                 min-height: 0;
                 width: auto;
                 background-color: transparent;
+                display: block;
                 position: relative;
 
                 .menu-inner {
@@ -155,8 +161,4 @@ nav {
             }
         }
     }
-}
-
-@media only screen and (min-width: 1200px) {
-    
 }

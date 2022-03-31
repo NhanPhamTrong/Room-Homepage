@@ -98,6 +98,7 @@ nav #navbar #menu {
   min-height: 100vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
+  display: none;
   position: fixed;
   left: 0;
   top: 0;
@@ -134,6 +135,10 @@ nav #navbar #menu .menu-inner ul li a {
   text-transform: lowercase;
 }
 
+nav #navbar #menu.active {
+  display: block;
+}
+
 @media only screen and (min-width: 600px) {
   nav #navbar #menu .menu-inner ul {
     width: 552px;
@@ -164,6 +169,7 @@ nav #navbar #menu .menu-inner ul li a {
     min-height: 0;
     width: auto;
     background-color: transparent;
+    display: block;
     position: relative;
   }
   nav #navbar #menu .menu-inner {
