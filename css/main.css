@@ -218,6 +218,8 @@ main #heading #hero-image .arrow-btn button {
   border: none;
   position: absolute;
   top: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 main #heading #hero-image .arrow-btn button:nth-child(1) {

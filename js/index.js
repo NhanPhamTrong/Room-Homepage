@@ -46,9 +46,15 @@ $(function() {
         let count = 0;
 
         function GetHeading() {
-            headingText.text(headingTextList[count]);
-            headingTitle.text(headingTitleList[count]);
-            heroImage.attr("src", heroImageList[count]);
+            heroImage.fadeOut(750);
+
+            setTimeout(function() {
+                headingText.text(headingTextList[count]);
+                headingTitle.text(headingTitleList[count]);
+                heroImage.attr("src", heroImageList[count]);
+            }, 750);
+
+            heroImage.fadeIn(750);
         }
 
         function PreviousImage() {
@@ -71,8 +77,24 @@ $(function() {
             GetHeading();
         }
 
-        GetHeading();
-        nextImageBtn.click(NextImage);
-        previousImageBtn.click(PreviousImage);
+        headingText.text(headingTextList[count]);
+        headingTitle.text(headingTitleList[count]);
+        heroImage.attr("src", heroImageList[count]);
+
+        nextImageBtn.click(function() {
+            NextImage();
+            nextImageBtn.attr("disabled", true);
+            setTimeout(function() {
+                nextImageBtn.attr("disabled", false);
+            }, 1500);
+        });
+
+        previousImageBtn.click(function() {
+            PreviousImage();
+            previousImageBtn.attr("disabled", true);
+            setTimeout(function() {
+                previousImageBtn.attr("disabled", false);
+            }, 1500);
+        });
     });
 });
